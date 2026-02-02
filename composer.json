@@ -1,0 +1,23 @@
+{
+  "name": "nikitoktok/oauth2-yandex-id",
+  "description": "Yandex ID provider for the PHP League OAuth2 Client",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "oauth2",
+    "yandex",
+    "yandex-id",
+    "league"
+  ],
+  "autoload": {
+    "psr-4": {
+      "Nikitoktok\\Provider\\": "src/Provider/"
+    }
+  },
+  "require": {
+    "php": "^7.4 || ^8.0",
+    "league/oauth2-client": "^2.0"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
