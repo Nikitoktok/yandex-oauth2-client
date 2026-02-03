@@ -19,6 +19,12 @@ $provider = new Yandex([
     'clientId' => 'your-client-id',
     'clientSecret' => 'your-client-secret',
     'redirectUri' => 'https://example.com/oauth/callback',
+    // Optional: override base URLs
+    // 'baseUrl' => 'https://oauth.yandex.com',
+    // 'resourceOwnerUrl' => 'https://login.yandex.ru/info',
+    // Or use snake_case aliases:
+    // 'base_url' => 'https://oauth.yandex.com',
+    // 'resource_owner_url' => 'https://login.yandex.ru/info',
 ]);
 
 $authorizationUrl = $provider->getAuthorizationUrl([

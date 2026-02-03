@@ -26,6 +26,23 @@ class Yandex extends AbstractProvider
     protected string $resourceOwnerUrl = 'https://login.yandex.ru/info';
 
     /**
+     * @param array $options
+     * @param array $collaborators
+     */
+    public function __construct(array $options = [], array $collaborators = [])
+    {
+        if (isset($options['base_url']) && !isset($options['baseUrl'])) {
+            $options['baseUrl'] = $options['base_url'];
+        }
+
+        if (isset($options['resource_owner_url']) && !isset($options['resourceOwnerUrl'])) {
+            $options['resourceOwnerUrl'] = $options['resource_owner_url'];
+        }
+
+        parent::__construct($options, $collaborators);
+    }
+
+    /**
      * @return string
      */
     public function getBaseAuthorizationUrl(): string
